@@ -24,6 +24,7 @@ export default function App() {
             placeholder='Valor 01'
             placeholderTextColor='#243870'
             keyboardType='numeric'
+            value={state.value1 === 0 ? undefined : String(state.value1)}
             style={styles.input}
             testID="value1"
             onChangeText={(value1) => {

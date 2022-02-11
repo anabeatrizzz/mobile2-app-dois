@@ -19,6 +19,15 @@ describe('<App />', () => {
   })
 
   it('calculates right', () => {
-
+    const { getByTestId } = render(<App />)
+    
+    fireEvent.changeText(getByTestId('value1'), 8)
+    fireEvent.changeText(getByTestId('value2'), 20)
+    fireEvent.changeText(getByTestId('value3'), 160)
+    fireEvent.changeText(getByTestId('value4'), 5)
+    fireEvent.changeText(getByTestId('value5'), 125)
+    fireEvent.press(getByTestId('calculate-btn'))
+    
+    expect(getByTestId('result').props.value).toBe("25")
   })
 })
