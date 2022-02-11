@@ -72,6 +72,7 @@ export default function App() {
           <TextInput
             editable={false}
             style={styles.input}
+            testID="result"
             value={String(state.result)}
           >
           </TextInput>
